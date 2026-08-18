@@ -11,7 +11,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-	int not1, not2, not3,ortalama;
+	int not1, not2, not3;
 	cout << "1. Sınav Notu: ";
 	cin >> not1;
 	cout << "2. Sınav Notu: ";
@@ -19,9 +19,9 @@ int main() {
 	cout << "3. Sınav Notu: ";
 	cin >> not3;
 
-	ortalama = (float) (not1 + not2 + not3) / 3;
+	double ortalama = (float) (not1 + not2 + not3) / 3;
 
-	cout << "Ortalama (Küsüratlı): " << fixed << setprecision(2) << (float)ortalama << endl;
+	cout << "Ortalama (Küsüratlı): " << fixed << setprecision(2) << ortalama << endl;
 	cout << "Ortalama (Küsüratsız): " << fixed << setprecision(0) << round(ortalama) << endl;
 	return 0;
 }
