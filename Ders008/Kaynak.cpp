@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector> // Dizilerde İşlemleri İçin
 #include <windows.h> // Türkçe Karakter Desteği
+#include <chrono>
 
 using namespace std;
 
@@ -14,29 +15,30 @@ int main() {
 
     cout << "Lütfen bir tam sayı giriniz: ";
     cin >> sayi;
+    chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
     for (int i = 2; i <= sayi; i++) {
-
         bool asal = true;
-
         for (int j = 2; j < i; j++) {
-
             if (i % j == 0) {
                 asal = false;
                 break;
             }
         }
-
         if (asal) {
             cout << i << " ";
             sayilar.push_back(i);
         }
     }
-
     cout << endl << endl;
     cout << "Asal SAYILAR DİZİSİ: " << endl;
-
     for (int i = 0; i < sayilar.size(); i++) {
         cout << sayilar[i] << " ";
     }
+    cout << "Chrono Time Diff" << endl;
+    chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    std::cout << "Time difference = "
+        << chrono::duration_cast<std::chrono::microseconds>(end - begin).count()
+        << "[µs]" << std::endl;
+
 }
