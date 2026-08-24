@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Ders008.vcxproj" Id="48fad9f6-0e38-4ac2-940f-2efac2ae388a" />
+  <Project Path="Ders009.vcxproj" />
 </Solution>
