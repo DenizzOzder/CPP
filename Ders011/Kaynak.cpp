@@ -24,6 +24,15 @@ int main() {
 	cout << " a nın Değeri: " << *ptr << endl; // ptr'nin gösterdiği değeri yazdırır."
 	cout << " a nın Değeri: " << a << endl; // a'nın değerini yazdırır.	
 
+	// Pointerlar ve Diziler
+
+	int arr[] = { 8,12,20 }; // arr isminde bir dizi oluşturduk ve değerlerini atadık.
+	int* p = arr;
+
+	cout << *p << endl; // 8
+	cout << *(p + 1) << endl; // 12
+
+
 
 
 }
